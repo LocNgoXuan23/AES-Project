@@ -14,7 +14,7 @@ def genOneTime(plaintext, key):
     print('cirpher : ', cirpher)
     print('plain : ', plain)
 
-def genAES(numOGen, fileName, plaintext, key):
+def genAES(num_gen, fileName, plaintext, key):
     # GET ALL PERMUTATIONS OF PLAINTEXT, KEY AND SHUFFLE 
     all_plaintext = allPermutations(plaintext, 4)
     all_key = allPermutations(key, 4)
@@ -38,13 +38,12 @@ def genAES(numOGen, fileName, plaintext, key):
                 file.write(str(cirpher) + "\n")
                 count += 1
                 print(count)
-                if count == numOGen:
+                if count == num_gen:
                     conti = False
                     break
 
             if not conti:
                 break
-
 
 if __name__ == '__main__':
     plaintext = "0123456789abcdeffedcba9876543210"
